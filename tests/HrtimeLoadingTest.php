@@ -1,12 +1,12 @@
 <?php
 /**
- * Obsidian
+ * Leoloso
  * Copyright 2020 ObsidianPHP, All Rights Reserved
  *
  * License: https://github.com/ObsidianPHP/polyfill-hrtime/blob/master/LICENSE
  */
 
-namespace Obsidian\Polyfill\Hrtime\Tests;
+namespace Leoloso\Polyfill\Hrtime\Tests;
 
 use PHPUnit\Framework\TestCase;
 
@@ -17,9 +17,9 @@ class HrtimeLoadingTest extends TestCase {
         }
         
         \xdebug_start_function_monitor(array(
-            'Obsidian\\Polyfill\\Hrtime\\hrtime_ext_uv',
-            'Obsidian\\Polyfill\\Hrtime\\hrtime_ext_hrtime',
-            'Obsidian\\Polyfill\\Hrtime\\hrtime_fallback'
+            'Leoloso\\Polyfill\\Hrtime\\hrtime_ext_uv',
+            'Leoloso\\Polyfill\\Hrtime\\hrtime_ext_hrtime',
+            'Leoloso\\Polyfill\\Hrtime\\hrtime_fallback'
         ));
         
         \hrtime();
@@ -30,13 +30,13 @@ class HrtimeLoadingTest extends TestCase {
         switch(\getenv('EXT_INSTALL', true)) {
             case 'all':
             case 'uv':
-                $fun = 'Obsidian\\Polyfill\\Hrtime\\hrtime_ext_uv';
+                $fun = 'Leoloso\\Polyfill\\Hrtime\\hrtime_ext_uv';
             break;
             case 'hrtime':
-                $fun = 'Obsidian\\Polyfill\\Hrtime\\hrtime_ext_hrtime';
+                $fun = 'Leoloso\\Polyfill\\Hrtime\\hrtime_ext_hrtime';
             break;
             case 'none':
-                $fun = 'Obsidian\\Polyfill\\Hrtime\\hrtime_fallback';
+                $fun = 'Leoloso\\Polyfill\\Hrtime\\hrtime_fallback';
             break;
             default:
                 throw new \RuntimeException('Unknown "EXT_INSTALL" env var value');

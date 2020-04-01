@@ -1,12 +1,12 @@
 <?php
 /**
- * Obsidian
+ * Leoloso
  * Copyright 2020 ObsidianPHP, All Rights Reserved
  *
  * License: https://github.com/ObsidianPHP/polyfill-hrtime/blob/master/LICENSE
  */
 
-namespace Obsidian\Polyfill\Hrtime\Tests;
+namespace Leoloso\Polyfill\Hrtime\Tests;
 
 use PHPUnit\Framework\TestCase;
 
@@ -17,9 +17,9 @@ use PHPUnit\Framework\TestCase;
 class HrtimeTest extends TestCase {
     function providerTestFunctions() {
         return array(
-            array('\\Obsidian\\Polyfill\\Hrtime\\hrtime_ext_uv', false),
-            array('\\Obsidian\\Polyfill\\Hrtime\\hrtime_ext_hrtime', false),
-            array('\\Obsidian\\Polyfill\\Hrtime\\hrtime_fallback', true)
+            array('\\Leoloso\\Polyfill\\Hrtime\\hrtime_ext_uv', false),
+            array('\\Leoloso\\Polyfill\\Hrtime\\hrtime_ext_hrtime', false),
+            array('\\Leoloso\\Polyfill\\Hrtime\\hrtime_fallback', true)
         );
     }
     

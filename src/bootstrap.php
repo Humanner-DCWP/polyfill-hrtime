@@ -1,12 +1,12 @@
 <?php
 /**
- * Obsidian
+ * Leoloso
  * Copyright 2020 ObsidianPHP, All Rights Reserved
  *
  * License: https://github.com/ObsidianPHP/polyfill-hrtime/blob/master/LICENSE
  */
 
-if(!function_exists('\\Obsidian\\Polyfill\\Hrtime\\hrtime_fallback\\hrtime_fallback')) {
+if(!function_exists('\\Leoloso\\Polyfill\\Hrtime\\hrtime_fallback\\hrtime_fallback')) {
     require 'functions.php';
 }
 
@@ -14,9 +14,9 @@ if(function_exists('hrtime')) {
     return;
 }
 
-use function Obsidian\Polyfill\Hrtime\hrtime_ext_uv;
-use function Obsidian\Polyfill\Hrtime\hrtime_ext_hrtime;
-use function Obsidian\Polyfill\Hrtime\hrtime_fallback;
+use function Leoloso\Polyfill\Hrtime\hrtime_ext_uv;
+use function Leoloso\Polyfill\Hrtime\hrtime_ext_hrtime;
+use function Leoloso\Polyfill\Hrtime\hrtime_fallback;
 
 if(function_exists('uv_hrtime')) {
     function hrtime(bool $get_as_number = false) {

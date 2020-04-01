@@ -6,5 +6,5 @@ This is an implementation of a complete hrtime which can utilize `uv` and `hrtim
 
 Install this polyfill from composer using
 ```
-composer require obsidian/polyfill-hrtime
+composer require leoloso/polyfill-hrtime
 ```

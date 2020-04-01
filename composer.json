@@ -1,5 +1,5 @@
 {
-    "name": "obsidian/polyfill-hrtime",
+    "name": "leoloso/polyfill-hrtime",
     "description": "A polyfill for hrtime.",
     "type": "library",
     "license": "Apache-2.0",
@@ -20,7 +20,7 @@
     },
     "autoload-dev": {
         "PSR-4": {
-            "Obsidian\\Polyfill\\Hrtime\\tests\\": "tests"
+            "Leoloso\\Polyfill\\Hrtime\\tests\\": "tests"
         }
     }
 }
